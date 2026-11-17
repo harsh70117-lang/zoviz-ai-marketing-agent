@@ -60,8 +60,8 @@ Example output:
 
 | Route | Input | Output |
 |---|---|---|
-| REST (this script) | `https://stripe.com` | [`examples/Stripe_social_post.png`](examples/Stripe_social_post.png) |
-| MCP (in Claude) | One-line brand idea: an imaginary cold brew coffee shop | [`examples/Kettleglow_social_post.png`](examples/Kettleglow_social_post.png) |
+| REST (this script) | `https://stripe.com` | [`Stripe_social_post.png`](Stripe_social_post.png) |
+| MCP (in Claude) | One-line brand idea: an imaginary cold brew coffee shop | [`Kettleglow_social_post.png`](Kettleglow_social_post.png)
 
 ## Cost
 
