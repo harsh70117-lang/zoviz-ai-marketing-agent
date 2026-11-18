@@ -38,10 +38,12 @@ $env:ZOVIZ_API_KEY="your-key-here"
 ## Run
 
 ```bash
-python zoviz_agent.py
+python zoviz_agent.py https://stripe.com
 ```
 
-The target site is set in `main()` (`target_website`). Change it to try any brand. The image is saved to `generated_assets/<brand_name>_social_post.png`.
+The website is a command-line argument. Leave it out and it defaults to `https://stripe.com`. The image is saved to `generated_assets/<brand_name>_social_post.png`, where the brand name is reduced to letters, digits, `_` and `-`.
+
+If `ZOVIZ_API_KEY` isn't set, or the extractor returns no brand name or description, the script stops with a clear message instead of carrying on.
 
 Example output:
 
@@ -61,7 +63,8 @@ Example output:
 | Route | Input | Output |
 |---|---|---|
 | REST (this script) | `https://stripe.com` | [`Stripe_social_post.png`](Stripe_social_post.png) |
-| MCP (in Claude) | One-line brand idea: an imaginary cold brew coffee shop | [`Kettleglow_social_post.png`](Kettleglow_social_post.png)
+| MCP (in Claude) | One-line brand idea: an imaginary cold brew coffee shop | [`Kettleglow_social_post.png`](Kettleglow_social_post.png) |
+| MCP (in Claude), logo as reference | Same brand, Nano Banana 2 with the logo as a reference image | [`Kettleglow_branded_post.png`](Kettleglow_branded_post.png) |
 
 ## Cost
 
@@ -91,6 +94,6 @@ Claude calls `create_logo`, `add_brand`, `models_explore` and `generate_image`. 
 
 ## Known limitations
 
-- If the extractor returns no brand name or description, the script falls back to placeholder strings and keeps going instead of stopping.
-- The output filename is built directly from the brand name and is not sanitized.
-- The target URL is hardcoded in `main()`.
+- It makes one image from one URL. There are no retries and no rate-limit handling.
+- The extracted colors are passed into the prompt as-is (a Python dict), which worked in testing but isn't strictly formatted.
+- It doesn't write marketing copy. The Zoviz MCP server I connected to (27 tools) doesn't expose a copy-writing tool, so in the tutorial Claude writes the caption and Zoviz makes the visual.
