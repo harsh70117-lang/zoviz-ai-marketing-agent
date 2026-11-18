@@ -64,7 +64,7 @@ Example output:
 |---|---|---|
 | REST (this script) | `https://stripe.com` | [`Stripe_social_post.png`](Stripe_social_post.png) |
 | MCP (in Claude) | One-line brand idea: an imaginary cold brew coffee shop | [`Kettleglow_social_post.png`](Kettleglow_social_post.png) |
-| MCP (in Claude), logo as reference | Same brand, Nano Banana 2 with the logo as a reference image | [`Kettleglow_branded_post.png`](Kettleglow_branded_post.png) |
+| MCP (in Claude), logo as reference | Same brand, Nano Banana 2 with the logo as a reference image | [`11-kettleglow-branded-post.png`](11-kettleglow-branded-post.png) |
 
 ## Cost
 
