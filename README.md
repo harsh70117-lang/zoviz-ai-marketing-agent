@@ -52,7 +52,7 @@ Example output:
 [*] Created output directory: generated_assets/
 [*] Extracting brand data from: https://stripe.com
 [+] Brand Identified: Stripe
-[+] Brand Colors: {'primary': '#635bff', 'secondary': '#0a2540'}
+[+] Brand Colors: {'primary': '#635bff', 'secondary': '#031323'}
 [*] Generating image for: Stripe
 [*] Waiting for AI to generate image (this takes ~10-20s)...
 [+] SUCCESS: Image saved to generated_assets\Stripe_social_post.png
